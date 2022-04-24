@@ -1,7 +1,7 @@
 from math import *
 import sys
 
-class Bisezione():
+class Bisector():
     def __init__(self, f):
         self.f = f
 

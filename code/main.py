@@ -1,7 +1,7 @@
 import sys
 from math import pi
 from math import e
-from bisezione import Bisezione
+from bisection import Bisector
 
 print('Developed by Francesco Marras and Luca Porzio:')
 f = input('Function > ')
@@ -10,7 +10,7 @@ f = f.replace('^', '**')
 if 'x' in f:
     a = float(input('a: '))
     b = float(input('b: '))
-    bisett = Bisezione(f)
+    bisett = Bisector(f)
     bisett.find(a, b)
 else:
     try:
