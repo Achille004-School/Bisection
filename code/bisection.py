@@ -22,16 +22,20 @@ class Bisector:
 
     # Finds a root of the function within the interval [a, b] using the bisection method.
     def find(self, a: float, b: float):
+        # Calculate value of a and b in f.
+        a_val = self.calc(a)
+        b_val = self.calc(b)
+        
         # Check if the initial points are roots
-        if self.calc(a) == 0:
+        if a_val == 0:
             print(f'Zero of the function: {a}')
             return
-        if self.calc(b) == 0:
+        if b_val == 0:
             print(f'Zero of the function: {b}')
             return
 
         # Check if the signs of the function values at points a and b are different, indicating a potential root.
-        if self.calc(a) * self.calc(b) > 0:
+        if a_val * b_val > 0:
             # Print an error message if the signs of the function values at points a and b are not different.
             print("Invalid values for proceeding with the algorithm.")
             return
